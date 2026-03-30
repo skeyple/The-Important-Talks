@@ -116,6 +116,14 @@
 					margin-bottom: 20px;
 				}
 				.item {
+					cursor: pointer;
+					transition: scale 0.2s ease-in-out;
+					&:hover {
+						scale: 1.01;
+					}
+					&:active {
+						scale: 0.99;
+					}
 					margin-top: 10px;
 					padding: 10px;
 					display: flex;
@@ -172,6 +180,14 @@
 					}
 				}
 				.see_more {
+					transition: font-size 0.2s ease-in-out;
+					&:hover {
+						font-size: 31px;
+					}
+					&:active {
+						font-size: 29px;
+					}
+					cursor: pointer;
 					position: absolute;
 					bottom: 0;
 					left: 0;

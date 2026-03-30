@@ -34,14 +34,31 @@ const AppRouter = () => {
 			behavior: "smooth",
 		});
 	};
+	const scrollToPage = (page: number) => {
+		if (!mainRef.current) return;
+		mainRef.current.scrollTo({
+			top: window.innerHeight * page,
+			behavior: "smooth",
+		});
+	};
 	return (
 		<div className={styles.container}>
 			<div className={styles.header} ref={headerRef}>
-				<div className={styles.item}>podcasts</div>
-				<div className={styles.item}>the idea</div>
-				<div className={styles.item}>about us</div>
-				<div className={styles.item}>support</div>
-				<div className={styles.item}>links</div>
+				<div className={styles.item} onClick={() => scrollToPage(0.8)}>
+					podcasts
+				</div>
+				<div className={styles.item} onClick={() => scrollToPage(2)}>
+					the idea
+				</div>
+				<div className={styles.item} onClick={() => scrollToPage(3)}>
+					about us
+				</div>
+				<div className={styles.item} onClick={() => scrollToPage(0)}>
+					support
+				</div>
+				<div className={styles.item} onClick={() => scrollToPage(0)}>
+					links
+				</div>
 			</div>
 			<div ref={mainRef} className={styles.main} onScroll={handleScroll}>
 				<Home />

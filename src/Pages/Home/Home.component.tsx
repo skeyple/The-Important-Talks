@@ -1,5 +1,5 @@
 import styles from "./Home.module.scss";
-import Words from "./svg/svg";
+import Svg from "./svg/svg";
 
 interface PropsItemPodcast {
 	title: string;
@@ -21,7 +21,7 @@ const ItemPodcast = ({ title, time, author, likes, key }: PropsItemPodcast) => {
 				<div className={styles.like}>
 					<div className={styles.cnt}>{likes}</div>
 					<div className={styles.btn}>
-						<Words.LikeBtn w={30} h={30} />
+						<Svg.LikeBtn w={30} h={30} />
 					</div>
 				</div>
 				<div className={styles.time}>{time}</div>
@@ -31,35 +31,11 @@ const ItemPodcast = ({ title, time, author, likes, key }: PropsItemPodcast) => {
 };
 
 const Home = () => {
-	const size_w = 110;
 	return (
 		<div className={styles.container}>
 			<div className={styles.Home}>
 				<div className={styles.header}>
-					<div className={styles.I}>
-						<Words.I w={size_w} h={size_w} />
-					</div>
-					<div className={styles.D}>
-						<Words.D w={size_w} h={size_w} />
-					</div>
-					<div className={styles.E}>
-						<Words.E w={size_w} h={size_w} />
-					</div>
-					<div className={styles.A}>
-						<Words.A w={size_w} h={size_w} />
-					</div>
-					<div className={styles.C}>
-						<Words.C w={size_w} h={size_w} />
-					</div>
-					<div className={styles.A}>
-						<Words.A w={size_w} h={size_w} />
-					</div>
-					<div className={styles.S}>
-						<Words.S w={size_w} h={size_w} />
-					</div>
-					<div className={styles.T}>
-						<Words.T w={size_w} h={size_w} />
-					</div>
+					<Svg.IdeaCast w={1156} h={120} />
 				</div>
 				<div className={styles.sep} />
 				<div className={styles.desc}>ideas worth learning</div>
@@ -69,7 +45,7 @@ const Home = () => {
 						<div className={styles.fltr}>
 							<div className={styles.title}>filters</div>
 							<div className={styles.img}>
-								<Words.FltrMenu w={36} h={36} />
+								<Svg.FltrMenu w={36} h={36} />
 							</div>
 						</div>
 						<div className={styles.search}>
@@ -78,7 +54,7 @@ const Home = () => {
 								placeholder="find your podcast here"
 							/>
 							<div className={styles.btn}>
-								<Words.Search w={30} h={30} />
+								<Svg.Search w={30} h={30} />
 							</div>
 						</div>
 					</div>
