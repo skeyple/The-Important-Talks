@@ -1,0 +1,90 @@
+.container {
+	height: 100vh;
+	.TheIdea {
+		padding: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		.title {
+			margin-top: 20px;
+			display: flex;
+			position: relative;
+			.the {
+				font-size: 100px;
+				font-weight: 700;
+				color: black;
+				text-align: end;
+				width: 180px;
+			}
+			.idea {
+				background: url(/src/Pages/TheIdea/idea.svg) no-repeat;
+				background-position: center;
+				background-size: cover;
+				height: 230px;
+				width: 620px;
+				position: absolute;
+				margin-left: 150px;
+			}
+			.project {
+				font-size: 100px;
+				font-weight: 700;
+				color: black;
+				width: 400px;
+				text-align: end;
+				margin-left: calc(450px);
+				margin-top: 100px;
+			}
+		}
+		.info {
+			display: flex;
+			width: calc(100vw - 80px * 2);
+			margin-top: -20px;
+			.left {
+				margin-top: -20px;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: end;
+				flex-direction: column;
+				width: calc(284px + 298px - 80px);
+				.img {
+					background: url(cats.svg) no-repeat;
+					background-size: cover;
+					background-position: center;
+					height: 298px;
+					width: 298px;
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					top: 0;
+				}
+				.desc1 {
+					width: 284px;
+					text-align: end;
+					font-size: 15px;
+					margin-bottom: 30px;
+					margin-top: -10px;
+				}
+				.desc2 {
+					width: 204px;
+					text-align: end;
+					font-size: 15px;
+				}
+			}
+			.right {
+				margin-bottom: -30px;
+				flex: 1;
+				display: flex;
+				justify-content: end;
+				align-items: end;
+				.desc {
+					font-size: 20px;
+					width: 384px;
+					text-align: end;
+				}
+			}
+		}
+	}
+}

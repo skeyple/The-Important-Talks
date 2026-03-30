@@ -1,0 +1,47 @@
+.container {
+	background: url(background.svg);
+	background-size: cover;
+	height: 100vh;
+	background-position: top left;
+	background-repeat: no-repeat;
+	.About {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.icon {
+			background: url(icon.svg);
+			background-size: cover;
+			height: 518px;
+			width: 625px;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.info {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			.wrap {
+				.ic {
+					background: url(about_us.svg);
+					background-size: cover;
+					height: 200px;
+					width: 500px;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+				.text {
+					margin-left: 20px;
+					width: 100%;
+					text-align: start;
+					margin-top: 40px;
+					color: black;
+					font-weight: 300;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
