@@ -34,6 +34,9 @@
 			margin-top: 25vh;
 			display: flex;
 			flex-direction: column;
+			height: calc(
+				200vh - 180px - 48px - 108px - 76px - 62px - 20px - 40px - 20vh
+			);
 			.title {
 				display: flex;
 				justify-content: start;
@@ -99,16 +102,18 @@
 				}
 			}
 			.list {
+				height: 100%;
 				position: relative;
 				margin-top: 40px;
 				display: flex;
 				flex-direction: column;
-				justify-content: center;
+				justify-content: start;
 				align-items: center;
 				padding: 30px 80px;
 				border-radius: 30px;
 				background-color: rgba($color: #210e0e, $alpha: 0.75);
 				backdrop-filter: blur(10px);
+				overflow: hidden;
 				.title {
 					color: white;
 					font-weight: 300;

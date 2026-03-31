@@ -1,6 +1,7 @@
 .container {
 	background-color: white;
 	margin-top: 90px;
+
 	.header {
 		display: flex;
 		justify-content: space-evenly;
@@ -11,60 +12,80 @@
 		top: 0;
 		height: 90px;
 		background-color: white;
-		&.shadow {
-			box-shadow: #00000030 0px 20px 20px 0px;
-		}
 		z-index: 99;
+		transition: box-shadow 0.2s ease-in-out;
+
+		&.shadow {
+			box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 20px 0px;
+		}
+
 		.item {
+			background: none;
+			border: none;
 			color: black;
 			text-decoration: underline;
 			font-size: 25px;
 			font-weight: 300;
 			cursor: pointer;
-			transition: scale 0.2s ease-in-out;
+			transform-origin: center;
+			transition: transform 0.2s ease-in-out;
+			padding: 8px;
+
 			&:hover {
-				scale: 1.1;
+				transform: scale(1.1);
 			}
 			&:active {
-				scale: 0.9;
+				transform: scale(0.95);
 			}
 		}
 	}
+
 	.main {
-		overflow-y: scroll;
+		overflow-y: auto;
 		height: calc(100vh - 90px);
+		scroll-behavior: smooth;
+		position: relative;
+
+		.sep {
+			height: 1px;
+			background: #eee;
+			margin: 40px 0;
+		}
+
 		.fab {
-			scale: 0;
-			&.active {
-				scale: 1;
-			}
-			bottom: 0;
-			right: 0;
-			height: 60px;
-			width: 60px;
-			border-radius: 100%;
+			transform: scale(0);
+			transition: transform 0.2s ease-in-out;
 			position: fixed;
-			background-color: rgba($color: #210e0e, $alpha: 0.5);
+			bottom: 1vh;
+			right: 4vh;
+			height: 10vh;
+			width: 10vh;
+			border-radius: 50%;
+			background-color: rgba(33, 14, 14, 0.5);
 			backdrop-filter: blur(10px);
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-bottom: 20px;
-			margin-right: 40px;
 			cursor: pointer;
-			transition: scale 0.2s ease-in-out;
+			border: none;
+			padding: 0;
+
+			&.active {
+				transform: scale(1);
+			}
+
 			&:hover {
-				scale: 1.1;
+				transform: scale(1.05);
 			}
 			&:active {
-				scale: 0.9;
+				transform: scale(0.95);
 			}
+
 			.up_icon {
-				background: url(arrow.svg) no-repeat;
-				background-size: cover;
-				background-position: center;
+				background: url("arrow.svg") no-repeat center/contain;
 				height: 60%;
 				width: 60%;
+				display: block;
 			}
 		}
 	}

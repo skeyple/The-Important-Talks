@@ -6,12 +6,11 @@ interface PropsItemPodcast {
 	time: string;
 	author: string;
 	likes: string;
-	key: string | number;
 }
 
-const ItemPodcast = ({ title, time, author, likes, key }: PropsItemPodcast) => {
+const ItemPodcast = ({ title, time, author, likes }: PropsItemPodcast) => {
 	return (
-		<div className={styles.item} key={key}>
+		<div className={styles.item}>
 			<div className={styles.info}>
 				<div className={styles.title_info}>{title}</div>
 				<div className={styles.desc_info}>podcast host - {author}</div>
@@ -60,7 +59,7 @@ const Home = () => {
 					</div>
 					<div className={styles.list}>
 						<div className={styles.title}>all podcasts</div>
-						{[...new Array(3)].map((_, i) => (
+						{[...new Array(10)].map((_, i) => (
 							<ItemPodcast
 								time="35 min"
 								title="Studying abroad: ISPU students"

@@ -14,14 +14,14 @@ export default ({ w, h }: Props): JSX.Element => {
 			<path
 				d="M1.25 1.25L42.25 1.25"
 				stroke="white"
-				stroke-width="2.5"
-				stroke-linecap="round"
+				strokeWidth="2.5"
+				strokeLinecap="round"
 			/>
 			<path
 				d="M1.25 24.25H42.25"
 				stroke="white"
-				stroke-width="2.5"
-				stroke-linecap="round"
+				strokeWidth="2.5"
+				strokeLinecap="round"
 			/>
 		</svg>
 	);
